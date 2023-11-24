@@ -52,26 +52,26 @@ public:
 	{
 		if (Currind == -1)
 		{
-			throw("Stack is empty")
+			throw("Stack is empty");
 		}
 		Currind--;
-		return pMem[Currind]// в тетради написано currind-1
+		return pMem[Currind];// в тетради написано currind-1
 	}
 
-	T pop()
+	T top()
 	{
 		if (Currind == -1)
 		{
-			throw("Stack is empty")
+			throw("Stack is empty");
 		}
 		return pMem[Currind];
 	}
 
 	void clear()
 	{
-		while (!s.empty())
+		while (this.empty())
 		{
-			s.pop();
+			this.pop();
 		}
 	}
 

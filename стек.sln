@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.32901.82
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "стек", "стек\стек.vcxproj", "{C2A88B28-68E2-41FC-A039-66D42E3F7F98}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_stack", "test_stack\test_stack.vcxproj", "{29F674BD-EEAC-4C02-B3AC-917819CB7170}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{C2A88B28-68E2-41FC-A039-66D42E3F7F98}.Release|x64.Build.0 = Release|x64
 		{C2A88B28-68E2-41FC-A039-66D42E3F7F98}.Release|x86.ActiveCfg = Release|Win32
 		{C2A88B28-68E2-41FC-A039-66D42E3F7F98}.Release|x86.Build.0 = Release|Win32
+		{29F674BD-EEAC-4C02-B3AC-917819CB7170}.Debug|x64.ActiveCfg = Debug|x64
+		{29F674BD-EEAC-4C02-B3AC-917819CB7170}.Debug|x64.Build.0 = Debug|x64
+		{29F674BD-EEAC-4C02-B3AC-917819CB7170}.Debug|x86.ActiveCfg = Debug|Win32
+		{29F674BD-EEAC-4C02-B3AC-917819CB7170}.Debug|x86.Build.0 = Debug|Win32
+		{29F674BD-EEAC-4C02-B3AC-917819CB7170}.Release|x64.ActiveCfg = Release|x64
+		{29F674BD-EEAC-4C02-B3AC-917819CB7170}.Release|x64.Build.0 = Release|x64
+		{29F674BD-EEAC-4C02-B3AC-917819CB7170}.Release|x86.ActiveCfg = Release|Win32
+		{29F674BD-EEAC-4C02-B3AC-917819CB7170}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

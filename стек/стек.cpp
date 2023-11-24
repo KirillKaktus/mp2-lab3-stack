@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 #include"TStack.h"
-int BracketChecking(char *str)
+#include<string>
+using namespace std;
+int BracketChecking(string str)
 {
 Tstack<char> s(20);
 int res = 0;
@@ -17,6 +19,7 @@ for (int i = 0; i < str.size(); i++)
 }
 if (!s.empty())
 res = 2;
+return res;
 }
 
 int main()
