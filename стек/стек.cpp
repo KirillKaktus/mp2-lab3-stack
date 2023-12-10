@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include"TStack.h"
+#include"Tcalc.h"
 #include<string>
 using namespace std;
 int BracketChecking(string str)
@@ -24,6 +25,8 @@ return res;
 
 int main()
 {
+	Tcalc c("((1+1)^3*2)/2)");
+	cout << c.calc();
    
 }
 

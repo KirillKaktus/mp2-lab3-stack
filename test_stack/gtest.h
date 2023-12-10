@@ -49,7 +49,8 @@
 // easyUnit framework.
 
 #define _VARIADIC_MAX 10
-#define _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING to acknowledge that you have received this warning.
+
+#define _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING 
 #ifndef GTEST_INCLUDE_GTEST_GTEST_H_
 #define GTEST_INCLUDE_GTEST_GTEST_H_
 
@@ -8771,7 +8772,7 @@ class GTEST_API_ KilledBySignal {
 //
 #ifndef GTEST_INCLUDE_GTEST_GTEST_PARAM_TEST_H_
 #define GTEST_INCLUDE_GTEST_GTEST_PARAM_TEST_H_
-
+#define _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING
 
 // Value-parameterized tests allow you to test your code with different
 // parameters without writing multiple copies of the same test.
@@ -8953,7 +8954,7 @@ TEST_P(DerivedTest, DoesBlah) {
 
 #ifndef GTEST_INCLUDE_GTEST_INTERNAL_GTEST_PARAM_UTIL_H_
 #define GTEST_INCLUDE_GTEST_INTERNAL_GTEST_PARAM_UTIL_H_
-
+#define _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING
 #include <iterator>
 #include <utility>
 #include <vector>
@@ -9030,7 +9031,7 @@ TEST_P(DerivedTest, DoesBlah) {
 
 #ifndef GTEST_INCLUDE_GTEST_INTERNAL_GTEST_LINKED_PTR_H_
 #define GTEST_INCLUDE_GTEST_INTERNAL_GTEST_LINKED_PTR_H_
-
+#define _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING
 #include <stdlib.h>
 #include <assert.h>
 
@@ -9289,7 +9290,7 @@ linked_ptr<T> make_linked_ptr(T* ptr) {
 
 #ifndef GTEST_INCLUDE_GTEST_GTEST_PRINTERS_H_
 #define GTEST_INCLUDE_GTEST_GTEST_PRINTERS_H_
-
+#define _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING
 #include <ostream>  // NOLINT
 #include <sstream>
 #include <string>
@@ -9439,7 +9440,7 @@ void DefaultPrintNonContainerTo(const T& value, ::std::ostream* os) {
 }
 
 }  // namespace testing_internal
-
+#define _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING
 namespace testing {
 namespace internal {
 

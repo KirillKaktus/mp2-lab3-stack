@@ -9,9 +9,12 @@ public:
 
 	Tstack(int s = 10)
 	{
-		Maxsize = s;
-		pMem = new T[s];
-		Currind = -1;
+		if (s <= 0) throw "wrong size";
+		else {
+			Maxsize = s;
+			pMem = new T[s];
+			Currind = -1;
+		}
 	}
 
 	~Tstack()
@@ -24,7 +27,7 @@ public:
 		Maxsize = s.Maxsize;
 		pMem = new T[Maxsize];
 		Currind = s.Currind;
-		for (int i = 0; i < Currind; i++)
+		for (int i = 0; i <= Currind; i++)
 		{
 			pMem[i] = s.pMem[i];
 		}
@@ -42,10 +45,14 @@ public:
 	}
 	void push(const T& el)
 	{
-		pMem[Currind + 1] = el;
-		Currind++;
+			Currind++;
 		if (Currind >= Maxsize)
+		{
 			throw ("overload");
+		}
+		else {
+			pMem[Currind] = el;
+		}
 	}
 
 	T pop()
@@ -55,7 +62,7 @@ public:
 			throw("Stack is empty");
 		}
 		Currind--;
-		return pMem[Currind];// в тетради написано currind-1
+		return pMem[Currind+1];// в тетради написано currind-1
 	}
 
 	T top()
@@ -68,12 +75,9 @@ public:
 	}
 
 	void clear()
-	{
-		while (this.empty())
 		{
-			this.pop();
+		Currind = -1;
 		}
-	}
 
 };
 
