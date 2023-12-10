@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\стек\Tcalc.cpp" />
     <ClCompile Include="gtest-all.cc" />
     <ClCompile Include="test_main.cpp" />
     <ClCompile Include="test_stack.cpp" />
