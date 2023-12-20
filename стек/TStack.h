@@ -61,8 +61,10 @@ public:
 		{
 			throw("Stack is empty");
 		}
-		Currind--;
-		return pMem[Currind+1];// в тетради написано currind-1
+		else {
+			Currind--;
+			return pMem[Currind + 1];
+		}// в тетради написано currind-1
 	}
 
 	T top()

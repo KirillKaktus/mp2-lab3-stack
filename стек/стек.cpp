@@ -25,8 +25,8 @@ return res;
 
 int main()
 {
-	Tcalc c("((1+1)^3*2)/2)");
-	cout << c.calc();
+	Tcalc c("5+6*(2-3))");
+	cout << c.get_postfix();
    
 }
 

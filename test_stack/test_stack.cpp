@@ -1,5 +1,5 @@
 #include "../стек/TStack.h"
-//#include "../стек/Tcalc.h"
+#include "../стек/Tcalc.h"
 #include "gtest.h"
 using namespace std;
 
@@ -117,15 +117,38 @@ TEST(TStack, copy_constructor_works)
 TEST(Tcalc, can_calc_the_expression)
 {
 	Tcalc c("(5+(6-4)*6-4^2)/2");
-	EXPECT_EQ(c.calc(), (5 + (6 - 4) * 6 - 4 ^ 2) / 2);
+	EXPECT_EQ(c.calc(), (5 + (6 - 4) * 6 - pow(4,2)) / 2);
 }
-TEST(Tcalc, throws_when_expretion_is_wrong)
+TEST(Tcalc, throws_when_there_is_an_extra_operator)
 {
-	Tcalc c("5+6*as+(2-3))");
+	Tcalc c("5+6+-(2-3)");
 	ASSERT_ANY_THROW(c.calc());
+	
+	
 }
-TEST(Tcalc, throws_when_extra_operand)
+TEST(Tcalc, throws_when_create_calc_with_extra_bracket)
 {
-	Tcalc c("5+6*(2-3))");
-	ASSERT_ANY_THROW(c.calc());
+	ASSERT_ANY_THROW(Tcalc c("5+6*(2-3))"));
+	
+}
+TEST(Tcalc, postfix_is_right)
+{
+	Tcalc c("5+6*(2-3)");
+	EXPECT_EQ(c.get_postfix(), "5623-*+");
+}
+TEST(Tcalc, postfix_get_infix)
+{
+	Tcalc c("5+6*(2-3)");
+	EXPECT_EQ(c.get_infix(), "5+6*(2-3)");
+}
+TEST(Tcalc, can_calc_postfix)
+{
+	Tcalc c("5+6*(2-3)");
+	EXPECT_EQ(c.calcpostfix(), -1);
+}
+TEST(Tcalc, can_set_infix)
+{
+	Tcalc c;
+	c.set_infix("5+5+6*8");
+	EXPECT_EQ(c.get_infix(), "5+5+6*8");
 }

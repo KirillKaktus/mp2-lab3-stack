@@ -138,7 +138,14 @@ double Tcalc::calc()
 			C.push(str[i]);
 		}
 	}
-		if (!C.empty()) throw ("expression is wrong");
-		//if (!D.empty()) throw ("extra operand");
-		return D.pop();
+	double res;	
+	res = D.pop();	
+	if (!D.empty())
+	{
+		throw "troubles with result";
+	}
+	else
+	{
+		return res;
+	}
 }

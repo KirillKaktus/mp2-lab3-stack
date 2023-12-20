@@ -9,6 +9,10 @@ class Tcalc
 	Tstack<double> D;
 	Tstack <char> C;
 public:
+	Tcalc()
+	{
+		infix = "";
+	}
 	Tcalc(string s)
 	{
 		infix = s;
