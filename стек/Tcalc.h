@@ -6,8 +6,8 @@ using namespace std;
 class Tcalc
 {
 	string infix, postfix;
-	Tstack<double> D;
-	Tstack <char> C;
+	TLstack<double> D;
+	TLstack <char> C;
 public:
 	Tcalc()
 	{

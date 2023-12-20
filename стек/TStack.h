@@ -1,85 +1,94 @@
 #pragma once
 template <class T>
-class Tstack
+struct Tnode {
+	T val;
+	Tnode* pNext;
+};
+int count(Tnode<int>* pFirst)
 {
-	T* pMem;
-	int Maxsize;
-	int Currind;
+	Tnode<int>* p = pFirst; int k = 0;
+	while (p != nullptr)
+	{
+		p = (*p).pNext;//p=p->pNext
+		k++;
+	}
+	return k;
+}
+
+template <class T>
+class TLstack
+{
+	Tnode<T>* pFirst;
 public:
 
-	Tstack(int s = 10)
+	TLstack()
 	{
-		if (s <= 0) throw "wrong size";
-		else {
-			Maxsize = s;
-			pMem = new T[s];
-			Currind = -1;
-		}
+		*pfirst = nullptr;
 	}
 
-	~Tstack()
+	TLstack(const TLstack& s)
 	{
-		delete pMem;
-	}
-
-	Tstack(const Tstack& s)
-	{
-		Maxsize = s.Maxsize;
-		pMem = new T[Maxsize];
-		Currind = s.Currind;
-		for (int i = 0; i <= Currind; i++)
+		Tnode<int>* tmp = s.pFirst;
+		while (tmp != nullptr)
 		{
-			pMem[i] = s.pMem[i];
+			push(tmp->val);
+			tmp = tmp->pNext;
 		}
 	}
-
 	bool empty()
 	{
-		if (Currind == -1) return true;
+		if (*pfirst = nullptr)
+			return true;
 		else return false;
-	}
-	bool full()
-	{
-		if (Currind == Maxsize - 1) return true;
-		else return false;
-	}
-	void push(const T& el)
-	{
-			Currind++;
-		if (Currind >= Maxsize)
-		{
-			throw ("overload");
-		}
-		else {
-			pMem[Currind] = el;
-		}
 	}
 
-	T pop()
-	{
-		if (Currind == -1)
-		{
-			throw("Stack is empty");
-		}
-		else {
-			Currind--;
-			return pMem[Currind + 1];
-		}// в тетради написано currind-1
-	}
+	void push(const T el);
+
+	T pop();
 
 	T top()
 	{
-		if (Currind == -1)
-		{
-			throw("Stack is empty");
-		}
-		return pMem[Currind];
+		return pFirst->val;
 	}
 
 	void clear()
+	{
+		while (!this.empty())
 		{
-		Currind = -1;
+			this.pop();
 		}
+	}
+
+	~TLstack()
+	{
+		while (!empty())
+		{
+			pop();
+		}
+	}
 
 };
+template<class T>
+void TLstack<T>::push(const T el)
+{
+	Tnode<T>* tmp = new Tnode<T>;
+	tmp->val = el;
+	tmp->pNext = pFirst;
+	pFirst = tmp;
+}
+template<class T>
+T TLstack<T>::pop()
+{
+	if (this->empty())
+	{
+		throw("stack is empty");
+	}
+	else {
+		Tnode<T>* p = pFirst;
+		pFirst = pFirst->pNext;
+		T res = p->val;
+		delete p;
+		return res;
+	}
+}
 
