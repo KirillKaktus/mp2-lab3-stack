@@ -1,6 +1,6 @@
 #pragma once
 #include<iostream>
-#include"TStack.h"
+#include"TLstack.h"
 #include<string>
 using namespace std;
 class Tcalc

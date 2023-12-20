@@ -1,9 +1,9 @@
-#include "../стек/TStack.h"
+#include "../стек/TLstack.h"
 #include "../стек/Tcalc.h"
 #include "gtest.h"
 using namespace std;
 
-TEST(TStack, can_create_stack_with_positive_size)// То что тут написано отображается только в консоли
+/*TEST(TStack, can_create_stack_with_positive_size)// То что тут написано отображается только в консоли
 {
   ASSERT_NO_THROW(Tstack<int> s(4));
 }
@@ -109,7 +109,7 @@ TEST(TStack, copy_constructor_works)
 	Tstack<int> s1(s);
 	EXPECT_EQ(s.pop(), s1.pop());
 	EXPECT_EQ(s.pop(), s1.pop());
-}
+}*/
 
 
 

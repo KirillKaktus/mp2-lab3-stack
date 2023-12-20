@@ -1,11 +1,11 @@
 ﻿#include <iostream>
-#include"TStack.h"
+#include"TLstack.h"
 #include"Tcalc.h"
 #include<string>
 using namespace std;
 int BracketChecking(string str)
 {
-Tstack<char> s(20);
+TLstack<char> s(20);
 int res = 0;
 for (int i = 0; i < str.size(); i++)
 {

@@ -4,17 +4,6 @@ struct Tnode {
 	T val;
 	Tnode* pNext;
 };
-int count(Tnode<int>* pFirst)
-{
-	Tnode<int>* p = pFirst; int k = 0;
-	while (p != nullptr)
-	{
-		p = (*p).pNext;//p=p->pNext
-		k++;
-	}
-	return k;
-}
-
 template <class T>
 class TLstack
 {
@@ -23,7 +12,7 @@ public:
 
 	TLstack()
 	{
-		*pfirst = nullptr;
+		pFirst = nullptr;
 	}
 
 	TLstack(const TLstack& s)
@@ -37,7 +26,7 @@ public:
 	}
 	bool empty()
 	{
-		if (*pfirst = nullptr)
+		if (pFirst = nullptr)
 			return true;
 		else return false;
 	}
@@ -53,9 +42,9 @@ public:
 
 	void clear()
 	{
-		while (!this.empty())
+		while (!this->empty())
 		{
-			this.pop();
+			this->pop();
 		}
 	}
 
