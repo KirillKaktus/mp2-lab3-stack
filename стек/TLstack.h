@@ -26,7 +26,7 @@ public:
 	}
 	bool empty()
 	{
-		if (pFirst = nullptr)
+		if (pFirst == nullptr)
 			return true;
 		else return false;
 	}
