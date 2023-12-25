@@ -116,8 +116,8 @@ TEST(TStack, copy_constructor_works)
 
 TEST(Tcalc, can_calc_the_expression)
 {
-	Tcalc c("(5+(6-4)*6-4^2)/2");
-	EXPECT_EQ(c.calc(), (5 + (6 - 4) * 6 - pow(4,2)) / 2);
+	Tcalc c("(5.3333+(6-4)*6-4^2)/2.2");
+	EXPECT_EQ(c.calc(), (5.3333 + (6 - 4) * 6 - pow(4,2)) / 2.2);
 }
 TEST(Tcalc, throws_when_there_is_an_extra_operator)
 {
